@@ -1,0 +1,84 @@
+.header {
+  height: 15vh;
+  color: white;
+}
+
+.box-container {
+  width: 100vw;
+  padding: 25px;
+  height: 80vh;
+  background-color: black;
+}
+
+.box-container .left-container {
+  height: 100%;
+  width: 50%;
+}
+
+.box-container .left-container h3 {
+  color: white;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px #7a7a7a;
+}
+
+.box-container .left-container .button-container .box-cash {
+  height: 50px;
+  width: 150px;
+  background-color: #2e3c25;
+  color: darkgoldenrod;
+  border-radius: 5px;
+}
+
+.box-container .left-container .button-container .box-cash:hover {
+  background-color: #24301d;
+  color: #daa112;
+}
+
+.box-container .left-container .button-container .box-cash:active {
+  -webkit-box-shadow: 0 0 0 4px rgba(148, 148, 1, 0.308), 0 0 0 6px rgba(80, 80, 1, 0.329);
+          box-shadow: 0 0 0 4px rgba(148, 148, 1, 0.308), 0 0 0 6px rgba(80, 80, 1, 0.329);
+}
+
+.box-container .left-container .input {
+  width: 75%;
+  background-color: rgba(90, 90, 90, 0.295);
+  color: white;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.box-container .left-container button {
+  background-color: darkorange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.box-container .left-container button:active {
+  -webkit-box-shadow: 0 0 0 4px rgba(1, 148, 21, 0.308), 0 0 0 6px rgba(8, 59, 1, 0.329);
+          box-shadow: 0 0 0 4px rgba(1, 148, 21, 0.308), 0 0 0 6px rgba(8, 59, 1, 0.329);
+}
+
+.box-container .left-container button:hover {
+  background-color: #925000;
+  color: #9b9b9b;
+}
+
+.box-container .info-container {
+  background-color: rgba(58, 58, 58, 0.39);
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(38, 0, 255, 0.267), 0 0 0 6px rgba(51, 16, 253, 0.151), 0 0 0 9px rgba(124, 124, 124, 0.103);
+          box-shadow: 0px 0px 0px 1px rgba(38, 0, 255, 0.267), 0 0 0 6px rgba(51, 16, 253, 0.151), 0 0 0 9px rgba(124, 124, 124, 0.103);
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+@media (max-width: 769px) {
+  .box-container {
+    height: 1000px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

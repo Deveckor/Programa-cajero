@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero</title>
+    <link rel="stylesheet" href="./scss/custom.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="">
+    <header class="header  d-flex align-items-center">
+        <h1 class="m-4">Bienvenido el saldo es de: <span id="monto"></span></h1>
+    </header>
+    <section class="box-container d-flex flex-column flex-md-row align-items-center">
+
+
+        <section class="left-container d-flex flex-column justify-content-between ">
+            <h3>Selecciona el boton con la cantidad que quieres ingresar.</h3>
+            <section
+                class="button-container d-flex flex-wrap fs-4 fw-bold justify-content-center align-items-center gap-3">
+                <button id="btn-cien" class="box-cash">$100.00</button>
+                <button id="btn-cincuenta" class="box-cash">$50.00</button>
+                <button id="btn-veinte" class="box-cash">$20.00</button>
+                <button id="btn-diez" class="box-cash">$10.00</button>
+                <button id="btn-cinco" class="box-cash">$5.00</button>
+                <button id="btn-peso" class="box-cash">$1.00</button>
+            </section>
+            <div class="d-flex flex-column flex-md-row justify-content-between pe-4">
+
+                <input class="input" type="text" placeholder="Ingresa la cantidad que quieres cambiar:">
+                <button class="btn-cambiar">Cambiar</button>
+            </div>
+            
+        </section>
+        <section class="info-container">
+
+        </section>
+    </section>
+
+    <script src="./js/cajero.js" type="module"></script>
+</body>
+
+</html>

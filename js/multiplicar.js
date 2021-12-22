@@ -1,6 +1,6 @@
 
-export function multiplicarValores(mul, res, cambio, $monto) {
     
+export function multiplicarValores(mul,res, cambio, $monto) {
     for (const key in cambio) {
         if (Object.hasOwnProperty.call(cambio, key)) {
           const element = cambio[key];
@@ -9,6 +9,8 @@ export function multiplicarValores(mul, res, cambio, $monto) {
         }
     }
     
-    $monto.textContent = `$${res}.00`;
     
-}
+    $monto.textContent = `$${res}.00`;
+     
+    }
+    

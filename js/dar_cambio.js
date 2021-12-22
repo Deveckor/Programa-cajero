@@ -1,5 +1,7 @@
+const d = document;
+
 export function darCambio(dinero, cambio, res) {
-   
+    
     let total = res,
       counter = 0;
     if (dinero < total) {
@@ -108,14 +110,30 @@ export function darCambio(dinero, cambio, res) {
       if(validationPeso === 1){
         var messagePeso = `${counter} Monedas de $1`
       } 
-      alert(`
-      ${(a===1)?'':messageCien}
-      ${(validationCincuenta != 1)?'':messageCincuenta}
-      ${(validationVeinte != 1)?'':messageVeinte}
-      ${(validationDiez != 1)?'':messageDiez}
-      ${(validationCinco != 1)?'':messageCinco}
-      ${(validationPeso != 1)?'':messagePeso}
-      `)
+      let $info = d.getElementById('info'),
+      $ul = d.createElement("ul");
+      
+      $info.appendChild($ul);
+
+      
+
+      let li =
+      [`${(a===1)?'':messageCien}`,
+      `${(validationCincuenta != 1)?'':messageCincuenta}`,
+      `${(validationVeinte != 1)?'':messageVeinte}`,
+      `${(validationDiez != 1)?'':messageDiez}`,
+      `${(validationCinco != 1)?'':messageCinco}`,
+      `${(validationPeso != 1)?'':messagePeso}`]
+      
+      
+
+      li.forEach((el) =>{
+        setTimeout(() => {
+          let $li = d.createElement("li");
+          $li.textContent = el;
+          $ul.appendChild($li);
+        }, 2000);
+      })
       
     } else {
       

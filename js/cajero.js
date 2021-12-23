@@ -103,7 +103,7 @@ d.addEventListener('click', (e) => {
       } 
       $pot.classList.toggle("none");
       $pot.classList.remove("anipot");
-    }, 4900);
+    }, 5000);
     let res = parseInt($monto.textContent.replace('$', ''))
     let dinero = document.getElementById('input').value;
     

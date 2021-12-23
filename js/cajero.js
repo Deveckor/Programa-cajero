@@ -5,6 +5,7 @@ const d = document,
   $monto = d.getElementById('monto');
   
   
+  
 
 
 
@@ -30,7 +31,7 @@ res=0;
 multiplicarValores(mul,res, cambio, $monto);
 
 let residuo = parseInt($monto.textContent.replace('$', ''))
-console.log(residuo);
+
 
 d.addEventListener('click', (e) => {
   if (e.target.matches("#btn-cien")) {
@@ -65,13 +66,50 @@ d.addEventListener('click', (e) => {
     
   }
   if (e.target.matches(".btn-cambiar")) {
-    let res = parseInt($monto.textContent.replace('$', ''))
-    console.log(res);
-    let dinero = document.getElementById('input').value;
-    setTimeout(() => {
+
+    
+    let $coinOne = d.getElementById('coinOne'),
+    $cointwo = d.getElementById('coinTwo'),
+    $cointhree = d.getElementById('coinThree'),
+    $coinfour = d.getElementById('coinFour'),
+    $coinfive = d.getElementById('coinFive'),
+    $coin = [$coinOne, $cointwo, $cointhree, $coinfour, $coinfive],
+    $pot = d.getElementById('pot');
+    
+    
+    $pot.classList.toggle("none");
+    $pot.classList.add("anipot");
+
+    
+    for (let i = 0; i < $coin.length; i++) {
+      setTimeout(() => {
+        $coin[i].classList.toggle('none');
+        $coin[i].classList.add('ani')
+      }, Math.random() *2000);
       
-      darCambio(dinero,cambio,res);
-    }, 1000);
+    } 
+    
+    
+        
+    
+    
+    
+    
+
+    setTimeout(() => {
+      for (let i = 0; i < $coin.length; i++) {
+          $coin[i].classList.toggle('none');
+          $coin[i].classList.remove('ani'); 
+      } 
+      $pot.classList.toggle("none");
+      $pot.classList.remove("anipot");
+    }, 4900);
+    let res = parseInt($monto.textContent.replace('$', ''))
+    let dinero = document.getElementById('input').value;
+    
+      
+      darCambio(dinero,cambio,res,$monto);
+    
 
     e.preventDefault();
     

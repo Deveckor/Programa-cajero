@@ -1,90 +1,129 @@
-.header {
-  height: 15vh;
-  color: white;
-}
-.box-container {
-  width: 100vw;
-  padding: 25px;
-  height: 80vh;
-  
+$green: #2e3c25;
+$yellow: rgb(184, 184, 0);
+$purple: rgb(55, 0, 128);
 
-  background-color: black;
-
-  .left-container {
-    
-    height: 100%;
-    width: 50%;
-    h3{
-        color: white;
-        font-weight: 700;
-        text-shadow: 2px 2px 4px rgb(122, 122, 122);
-    }
-    .button-container {
-        
-      .box-cash {
-        
-        height: 50px;
-        width: 150px;
-        background-color: #2e3c25;
-        color: darkgoldenrod;
-
-        border-radius: 5px;
-      }
-      .box-cash:hover{
-        background-color: #24301d;
-        color: rgb(218, 161, 18);
-      }
-      .box-cash:active{
-        box-shadow: 0 0 0 4px rgba(148, 148, 1, 0.308),
-        0 0 0 6px rgba(80, 80, 1, 0.329)
-      }
-    }
-    .input{
-        width: 75%;
-        background-color: rgba(90, 90, 90, 0.295);
-        color: white;
-        height: 35px;
-        border: none;
-        border-radius: 5px;
-        padding-left: 10px;
-    }
-    button{
-        background-color: darkorange;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        width: 100px;
-    }
-    button:active{
-        box-shadow: 0 0 0 4px rgba(1, 148, 21, 0.308),
-        0 0 0 6px rgba(8, 59, 1, 0.329)
-        
-    }
-    button:hover{
-        background-color: rgb(146, 80, 0);
-        color: rgb(155, 155, 155);
-        
-    }
-  }
-  .info-container {
-    background-color: rgba(58, 58, 58, 0.39);
-    box-shadow:0px 0px 0px 1px rgba(38, 0, 255, 0.267),
-    0 0  0 6px rgba(51, 16, 253, 0.151),
-     0 0 0 9px rgba(124, 124, 124, 0.103);
-    width: 50%;
-    height: 100%;
+@mixin border {
     border-radius: 5px;
-    color: white;
-  }
 }
 
-@media (max-width: 769px) {
+.box-container{
+    background-color: black;
+    color: white;
+    height: fit-content;
+    .left-container{
+        width: 100%;
+        height: 400px;
+        .button-container{
+            .box-cash{
+                border: solid .01px #232e1c;
+                @include border();
+                background-color: $green;
+                color: white;
+                height: 50px;
+                width: 100px;
+                &:hover{
+                    background-color: #232e1c;
+                    color: $yellow;
+                }
+                &:active{
+                    box-shadow: 0px 0px 0px 1px rgb(255, 255, 0),
+                    0px 0px 0px 4px rgba(187, 187, 1, 0.377);
+                    
+                }
+            }
+        }
+        form{
+            input{
+                background-color: rgba(65, 65, 65, 0.767);
+                width: 300px;
+                height: 40px;
+                border: none;
+                @include border();
 
-    .box-container {
-        
-        height: 1000px;
+            }
+            .btn-cambiar{
+                
+                border: solid 0.01px rgb(161, 161, 0);
+                background-color: $yellow;
+                color: $green;
+                @include border();
+                &:hover{
+                    background-color: rgb(95, 95, 0);
+                    color: white;
+                }
+                &:active{
+                    box-shadow: 0 0 0 2px green;
+                }
+            }
+        }
     }
-    #input{
-        width: 105%;
+    .info-container{
+        width: 100%;
+        height: fit-content;
+        #info{
+            background-color: rgba(63, 63, 63, 0.322);
+            @include border();
+            height: 400px;
+        }
+        .none{
+            display: none;
+        }
+        .ani{
+            animation-duration: 5s;
+            animation-name: coin;
+            
+
+           @keyframes coin {
+               from{
+                   margin-top: 0%;
+               }
+               to{
+                 margin-top: 100%;  
+               }
+           }
+        }
+        .coin{
+
+            position: absolute;
+            top: 0px;
+            height: 50px;
+        }
+        .pot{
+            height: 100px;
+            position: absolute;
+            bottom: 0px;
+        }
+        .anipot{
+            animation-duration: 2s;
+            animation-name: pot;
+        }
+        @keyframes pot {
+            from{
+                margin-bottom: -15%;
+                height: 80px;
+            }
+
+            to{
+                margin-bottom: 0%;
+                height: 120px;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+    .box-container{
+    
+        
+        .left-container{
+            
+        }
+        .info-container{
+            
+            
+            
+        }
+    
     }
 }

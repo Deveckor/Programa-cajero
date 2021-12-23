@@ -1,10 +1,17 @@
 const d = document;
 
-export function darCambio(dinero, cambio, res) {
+export function darCambio(dinero, cambio, res,$monto) {
+  
+  let total = res,
+  counter = 0,
+  resstante = total - dinero,
+  $info = d.getElementById('info'),
+  $ul = d.createElement("ul");
+  $info.appendChild($ul);
+  
+  
     
-    let total = res,
-      counter = 0;
-    if (dinero < total) {
+    if (dinero <= total) {
       let rescien = dinero,
       a = 0;
       //Dar cambio de billetes $100
@@ -110,10 +117,8 @@ export function darCambio(dinero, cambio, res) {
       if(validationPeso === 1){
         var messagePeso = `${counter} Monedas de $1`
       } 
-      let $info = d.getElementById('info'),
-      $ul = d.createElement("ul");
       
-      $info.appendChild($ul);
+     
 
       
 
@@ -129,11 +134,19 @@ export function darCambio(dinero, cambio, res) {
 
       li.forEach((el) =>{
         setTimeout(() => {
-          let $li = d.createElement("li");
-          $li.textContent = el;
-          $ul.appendChild($li);
-        }, 2000);
-      })
+          if (!el) {
+            return null
+          } else {
+            let $li = d.createElement("li");
+            $li.textContent = el;
+            $ul.appendChild($li);
+          }
+      }, 5000);
+        })
+
+        $monto.textContent = `$${resstante}.00`
+        
+        
       
     } else {
       
@@ -142,6 +155,13 @@ export function darCambio(dinero, cambio, res) {
         Es superior al total que tenemos en cambio que es : $${total},
         Nos faltan $${dinero - total} para hacer su transacción, 
         vuelva pronto!!!`
-      
+      setTimeout(() => {
+        
+        $ul.textContent = messageE;
+      }, 5000);
     }
+    setTimeout(() => {
+      $ul.remove();
+      
+    }, 10000);
   }

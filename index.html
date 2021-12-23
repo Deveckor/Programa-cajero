@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cajero</title>
-    <link rel="stylesheet" href="./scss/custom.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/custom.css">
+
+    
+    
+    
+    
 </head>
 
-<body class="">
-    <header class="header  d-flex align-items-center">
-        <h1 class="m-4">Bienvenido el saldo es de: <span id="monto"></span></h1>
+<body>
+    <header class="header m-2">
+        <h1>Bienvenido tu saldo es de: <span id="monto"></span></h1>
     </header>
-    <section class="box-container d-flex flex-column flex-md-row align-items-center">
+    <section class="box-container d-flex flex-column flex-md-row">
 
 
-        <section class="left-container d-flex flex-column justify-content-between ">
-            <h3>Selecciona el boton con la cantidad que quieres ingresar.</h3>
+        <section class="left-container p-4  d-flex flex-column justify-content-between align-items-center">
+            <h3>Selecciona cantidad que quieres ingresar.</h3>
             <section
-                class="button-container d-flex flex-wrap fs-4 fw-bold justify-content-center align-items-center gap-3">
+                class="button-container d-flex justify-content-center flex-wrap gap-3 fs-4 fw-bold">
                 <button id="btn-cien" class="box-cash">$100.00</button>
                 <button id="btn-cincuenta" class="box-cash">$50.00</button>
                 <button id="btn-veinte" class="box-cash">$20.00</button>
@@ -27,20 +32,29 @@
                 <button id="btn-cinco" class="box-cash">$5.00</button>
                 <button id="btn-peso" class="box-cash">$1.00</button>
             </section>
-            <div class="d-flex flex-column flex-md-row justify-content-between pe-4">
-                <form action="" >
+            
+                <form action="" class="d-flex flex-wrap gap-2">
 
                     <input id="input" name="dinero"
-                    class="input mt-3" type="text" placeholder="Ingresa la cantidad que quieres cambiar:">
-                    <button class="mt-2 btn-cambiar">Cambiar</button>
+                    class="input" type="text" placeholder="Ingresa la cantidad que quieres cambiar:">
+                    <button class="btn-cambiar fs-4 fw-bold">Cambiar</button>
                 </form>
-            </div>
+        
             
         </section>
-        <section class="info-container mt-5 d-flex justify-content-center align-items-center" id="info">
-
+        <section class="info-container p-4" >
+            <div class="p-2 position-relative d-flex justify-content-center align-items-center" id="info">
+                <img id="coinOne" class="none coin" src="./asset/coin-svgrepo-com.svg" alt="coin">
+                <img id="coinTwo" class="none coin" src="./asset/coin-svgrepo-com.svg" alt="coin">
+                <img id="coinThree" class="none coin" src="./asset/coin-svgrepo-com.svg" alt="coin">
+                <img id="coinFour" class="none coin" src="./asset/coin-svgrepo-com.svg" alt="coin">
+                <img id="coinFive" class="none coin" src="./asset/coin-svgrepo-com.svg" alt="coin">
+                <img src="./asset/gold-pot-svgrepo-com.svg" alt="gold pot" class="pot none" id="pot">
+                
+            </div>
         </section>
     </section>
+    
 
     <script src="./js/cajero.js" type="module"></script>
 </body>

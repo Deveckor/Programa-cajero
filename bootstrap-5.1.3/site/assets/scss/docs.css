@@ -1050,7 +1050,7 @@
 }
 
 .bd-footer a:hover, .bd-footer a:focus {
-  color: #323EBE;
+  color: #0d6efd;
   text-decoration: underline;
 }
 
@@ -1591,7 +1591,7 @@
 
 .swatch-indigo {
   color: #fff;
-  background-color: #323EBE;
+  background-color: #6610f2;
 }
 
 .swatch-indigo::after {
@@ -1602,8 +1602,8 @@
   font-size: .75rem;
   line-height: 1.35;
   white-space: pre;
-  content: "8.17" "\a" "8.17" "\a" "2.56";
-  background-color: #323EBE;
+  content: "7.18" "\a" "7.18" "\a" "2.92";
+  background-color: #6610f2;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.25rem, transparent), color-stop(0.25rem, #fff), color-stop(0.75rem, transparent), color-stop(1.25rem, #fff), color-stop(1.75rem, transparent), color-stop(2.25rem, #000), color-stop(2.75rem, transparent));
   background-image: linear-gradient(to bottom, transparent 0.25rem, #fff 0.25rem 0.75rem, transparent 0.75rem 1.25rem, #fff 1.25rem 1.75rem, transparent 1.75rem 2.25rem, #000 2.25rem 2.75rem, transparent 2.75rem);
   background-repeat: no-repeat;
@@ -1909,47 +1909,47 @@
 
 .bd-indigo-100 {
   color: #000;
-  background-color: #d6d8f2;
+  background-color: #e0cffc;
 }
 
 .bd-indigo-200 {
   color: #000;
-  background-color: #adb2e5;
+  background-color: #c29ffa;
 }
 
 .bd-indigo-300 {
   color: #000;
-  background-color: #848bd8;
+  background-color: #a370f7;
 }
 
 .bd-indigo-400 {
   color: #fff;
-  background-color: #5b65cb;
+  background-color: #8540f5;
 }
 
 .bd-indigo-500 {
   color: #fff;
-  background-color: #323EBE;
+  background-color: #6610f2;
 }
 
 .bd-indigo-600 {
   color: #fff;
-  background-color: #283298;
+  background-color: #520dc2;
 }
 
 .bd-indigo-700 {
   color: #fff;
-  background-color: #1e2572;
+  background-color: #3d0a91;
 }
 
 .bd-indigo-800 {
   color: #fff;
-  background-color: #14194c;
+  background-color: #290661;
 }
 
 .bd-indigo-900 {
   color: #fff;
-  background-color: #0a0c26;
+  background-color: #140330;
 }
 
 .bd-purple-100 {
@@ -2391,7 +2391,7 @@
   display: block;
   padding: .25rem .5rem;
   font-size: 0.65em;
-  color: #323EBE;
+  color: #0d6efd;
   background-color: #fff;
   border: 1px solid;
   border-radius: 0.25rem;
@@ -2399,7 +2399,7 @@
 
 .btn-clipboard:hover, .btn-clipboard:focus {
   color: #fff;
-  background-color: #323EBE;
+  background-color: #0d6efd;
 }
 
 .bd-placeholder-img {
@@ -2772,7 +2772,7 @@
 
 .anchorjs-link {
   font-weight: 400;
-  color: rgba(50, 62, 190, 0.5);
+  color: rgba(13, 110, 253, 0.5);
   -webkit-transition: color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out;
 }
@@ -2785,7 +2785,7 @@
 }
 
 .anchorjs-link:focus, .anchorjs-link:hover {
-  color: #323EBE;
+  color: #0d6efd;
   text-decoration: none;
 }
 
